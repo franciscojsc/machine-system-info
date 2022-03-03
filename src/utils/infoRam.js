@@ -29,8 +29,11 @@ const stats = getStats(tRam, fRam, usage);
 setInterval(() => {
   const { tRam, fRam, usage } = infoSystem(totalmem, freemem);
   const stats = getStats(tRam, fRam, usage);
+
   console.clear();
   console.table(stats);
+
+  exports.stats = stats;
 }, 1000);
 
 exports.stats = stats;
